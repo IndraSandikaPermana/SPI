@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scarletpowerindonesia.com/sitemap.xml
