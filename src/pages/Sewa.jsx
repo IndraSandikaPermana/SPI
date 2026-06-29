@@ -5,6 +5,8 @@ import bor_bumi from "../assets/sewa/bor-bumi.png";
 import genset from "../assets/sewa/genset.png";
 import molen from "../assets/sewa/molen.png";
 import scaffolding from "../assets/sewa/scaffolding.png";
+import lampu_sorot from "../assets/sewa/lampu-sorot.png";
+import ac_standing from "../assets/sewa/ac-standing.png";
 
 const equipmentData = [
   {
@@ -35,6 +37,20 @@ const equipmentData = [
     description:
       "Rangka scaffolding kokoh dan aman untuk mendukung pekerjaan konstruksi di ketinggian.",
   },
+  {
+    id: 5,
+    name: "Lampu Sorot",
+    image: lampu_sorot,
+    description:
+      "Penerangan maksimal dan super terang untuk segala kebutuhan Anda! Lampu sorot LED berkualitas tinggi dengan daya 100 Watt yang menghasilkan cahaya putih bersih, fokus, dan hemat energi.",
+  },
+  {
+    id: 6,
+    name: "AC Standing",
+    image: ac_standing,
+    description:
+      "AC Standing berkapasitas besar yang mampu memberikan pendinginan optimal untuk acara, gedung, aula, tenda, pernikahan, seminar, maupun kebutuhan proyek. Hemat energi, bertenaga, dan siap digunakan di berbagai kondisi.",
+  },
 ];
 
 function EquipmentCard({ equipment }) {
@@ -47,9 +63,11 @@ function EquipmentCard({ equipment }) {
           className="w-full h-40 object-cover mb-4 rounded transition-transform duration-300 hover:scale-110"
         />
       </div>
+
       <h3 className="text-lg font-semibold mb-2 text-gray-700">
         {equipment.name}
       </h3>
+
       <p className="text-sm text-gray-600">{equipment.description}</p>
 
       <a href="https://api.whatsapp.com/send/?phone=6283808481122&text=Saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Sewa%20Alat%20😄👋">
@@ -78,6 +96,7 @@ export function Sewa() {
         </div>
 
         <Heading title="SEWA ALAT" />
+
         <div className="grid grid-cols-2 gap-6 py-4">
           {equipmentData.map((equipment) => (
             <EquipmentCard key={equipment.id} equipment={equipment} />
